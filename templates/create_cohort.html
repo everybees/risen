@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Cohort</title>
+</head>
+<body>
+    <h2>Create Cohort</h2>
+    <hr>
+    <a href="{% url 'cohorts' %}">View All Cohorts</a>
+    <hr>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create</button>
+    </form>
+</body>
+</html>

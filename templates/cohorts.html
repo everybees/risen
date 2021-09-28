@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Cohorts</title>
+</head>
+<body>
+    <h2>All Cohorts</h2>
+    <hr>
+    <a href="{% url 'create_cohort' %}">Create Cohort</a>
+    <hr>
+    {% if cohorts %}
+        {% for cohort in cohorts %}
+            <h4>{{ cohort.name }}</h4>
+            <h6>{{ cohort.description }}</h6>
+            <p>Date added: {{ cohort.date_created }}</p>
+        {% endfor %}
+    {% else %}
+        <h2>No cohorts exist yet. Create one</h2>
+    {% endif %}
+</body>
+</html>

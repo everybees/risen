@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Natives</title>
+</head>
+<body>
+    <h1>All Natives</h1>
+    <hr>
+    {% for native in natives %}
+        <h1>{{ native.scvn }}</h1>
+        <img src="{{ native.image.url }}" alt="{{ native.scvn }}" width="200">
+        <h2>{{ native.first_name }} {{ native.last_name }}</h2>
+        <h3>{{ native.email }}</h3>
+        <p>{{ native.cohort.name }}</p>
+        <p>{{ native.date_created }}</p>
+    {% endfor %}
+</body>
+</html>
